@@ -1,0 +1,1276 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>编辑图书</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- favicon
+        ============================================ -->
+        <script src="js/vendor/admin_jquery-1.12.4.min.js"></script>
+        <script src="js/checkadminlogin.js"></script>
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico"> -->
+    <!-- Google Fonts
+		============================================ -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet"> -->
+    <!-- Bootstrap CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/admin_bootstrap.min.css">
+    <!-- Bootstrap CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- owl.carousel CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.css">
+    <link rel="stylesheet" href="css/owl.transitions.css">
+    <!-- animate CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- normalize CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- meanmenu icon CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/meanmenu.min.css">
+    <!-- main CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- educate icon CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/educate-custon-icon.css">
+    <!-- morrisjs CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/morrisjs/morris.css">
+    <!-- mCustomScrollbar CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/scrollbar/jquery.mCustomScrollbar.min.css">
+    <!-- metisMenu CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/metisMenu/metisMenu.min.css">
+    <link rel="stylesheet" href="css/metisMenu/metisMenu-vertical.css">
+    <!-- calendar CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/calendar/fullcalendar.min.css">
+    <link rel="stylesheet" href="css/calendar/fullcalendar.print.min.css">
+    <!-- forms CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/form/all-type-forms.css">
+    <!-- dropzone CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/dropzone/dropzone.css">
+    <!-- style CSS
+		============================================ -->
+    <link rel="stylesheet" href="admin_style.css">
+    <!-- responsive CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- modernizr JS
+		============================================ -->
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+
+<body>
+    <!--[if lt IE 8]>
+		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+    <!-- Start Left menu area -->
+    <div class="left-sidebar-pro">
+        <nav id="sidebar" class="">
+            <div class="sidebar-header">
+                <a href="index.html"><img class="main-logo" src="img/logo/logo5.png" alt="" /></a>
+                <strong><a href="index.html"><img src="img/logo/logosn.png" alt="" /></a></strong>
+            </div>
+            <div class="left-custom-menu-adp-wrap comment-scrollbar">
+                <nav class="sidebar-nav left-sidebar-menu-pro">
+                    <ul class="metismenu" id="menu1">
+                        <li class="active">
+                            <a class="has-arrow" href="/admin_index">
+								   <span class="educate-icon educate-home icon-wrap"></span>
+								   <span class="mini-click-non">首选服务</span>
+								</a>
+                            <ul class="submenu-angle" aria-expanded="true">
+                                <li><a title="Dashboard v.1" href="/admin_index"><span class="mini-sub-pro">首页</span></a></li>
+                                <li><a href="/index" target="_blank"><span class="mini-sub-pro">前台书店首页</span></a></li>
+                                <li><a href="/adminlayout"><span class="mini-sub-pro">退出登录</span></a></li>
+                            </ul>
+                        </li>   
+                        <li>
+                            <a class="" href="/user_list" aria-expanded="false"><span class="educate-icon educate-professor icon-wrap"></span>用户管理</a>
+                        </li>
+                        <li>
+                            <a class="has-arrow" href="javascript:;" aria-expanded="false"><span class="educate-icon educate-course icon-wrap"></span> <span class="mini-click-non">订单管理</span></a>
+                            <ul class="submenu-angle interface-mini-nb-dp" aria-expanded="false">
+                                <li><a  href="/orders_list"><span class="mini-sub-pro">订单列表</span></a></li>
+                                <li><a  href="/detail_list"><span class="mini-sub-pro">订单详情表</span></a></li>
+                                <li><a href="/cgn_list"><span class="mini-sub-pro">收货人地址表</span></a></li>
+                                <li><a href="/gwc_list"><span class="mini-sub-pro">购物车存放表</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="has-arrow" href="/book_list" aria-expanded="false"><span class="educate-icon educate-library icon-wrap"></span> <span class="mini-click-non">图书管理</span></a>
+                            <ul class="submenu-angle interface-mini-nb-dp" aria-expanded="false">
+                                <li><a  href="/book_list"><span class="mini-sub-pro">图书列表</span></a></li>
+                                <li><a  href="/add_book"><span class="mini-sub-pro">添加图书</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="has-arrow" href="javascript:;" aria-expanded="false"><span class="educate-icon educate-department icon-wrap"></span> <span class="mini-click-non">分类管理</span></a>
+                            <ul class="submenu-angle interface-mini-nb-dp" aria-expanded="false">
+                                <li><a  href="/category_list"><span class="mini-sub-pro">图书分类列表</span></a></li>
+                                <li><a  href="/add_category"><span class="mini-sub-pro">添加分类</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="has-arrow" href="javascript:;" aria-expanded="false"><span class="educate-icon educate-interface icon-wrap"></span> <span class="mini-click-non">地区管理</span></a>
+                            <ul class="submenu-angle interface-mini-nb-dp" aria-expanded="false">
+                                <li><a  href="/provinces_list"><span class="mini-sub-pro">省份表</span></a></li>
+                                <li><a  href="/city_list"><span class="mini-sub-pro">城市表</span></a></li>
+                                <li><a title="Pdf Viewer" href="/area_list"><span class="mini-sub-pro">地区表</span></a></li>
+                                <li><a title="X-Editable" href="/street_list"><span class="mini-sub-pro">街道表</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="has-arrow" href="javascript:;" aria-expanded="false"><span class="educate-icon educate-professor icon-wrap"></span> <span class="mini-click-non">系统用户管理</span></a>
+                            <ul class="submenu-angle interface-mini-nb-dp" aria-expanded="false">
+                                <li><a  href="/adminuser_list"><span class="mini-sub-pro">系统用户列表</span></a></li>
+                                <li><a  href="/add_adminuser"><span class="mini-sub-pro">添加系统用户</span></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </nav>
+    </div>
+    <!-- End Left menu area -->
+    <!-- Start Welcome area -->
+    <div class="all-content-wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="logo-pro">
+                        <a href="/admin_index"><img class="main-logo" src="img/logo/logo.png" alt="" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-advance-area">
+            <div class="header-top-area">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="header-top-wraper">
+                                <div class="row">
+                                    <div class="col-lg-1 col-md-0 col-sm-1 col-xs-12">
+                                        <div class="menu-switcher-pro">
+                                            <button type="button" id="sidebarCollapse" class="btn bar-button-pro header-drl-controller-btn btn-info navbar-btn">
+													<i class="educate-icon educate-nav"></i>
+												</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-7 col-sm-6 col-xs-12">
+                                        <div class="header-top-menu tabl-d-n">
+                                            <ul class="nav navbar-nav mai-top-nav">
+                                                <ul class="nav navbar-nav mai-top-nav">
+                                                    <li class="nav-item"><a href="#" class="nav-link">首页</a>
+                                                    </li>
+                                                    <li class="nav-item"><a href="#" class="nav-link">关于</a>
+                                                    </li>
+                                                    <li class="nav-item"><a href="#" class="nav-link">服务</a>
+                                                    </li>
+                                                    <li class="nav-item"><a href="#" class="nav-link">支持</a>
+                                                    </li>
+                                                </ul>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                                        <div class="header-right-info">
+                                            <ul class="nav navbar-nav mai-top-nav header-right-menu">
+                                                <li class="nav-item dropdown">
+                                                    <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="educate-icon educate-message edu-chat-pro" aria-hidden="true"></i><span class="indicator-ms"></span></a>
+                                                    <div role="menu" class="author-message-top dropdown-menu animated zoomIn">
+                                                        <div class="message-single-top">
+                                                            <h1>消息</h1>
+                                                        </div>
+                                                        <ul class="message-menu">
+                                                            <!-- <li>
+                                                                <a href="#">
+                                                                    <div class="message-img">
+                                                                        <img src="img/contact/1.jpg" alt="">
+                                                                    </div>
+                                                                    <div class="message-content">
+                                                                        <span class="message-date">16 Sept</span>
+                                                                        <h2>Advanda Cro</h2>
+                                                                        <p>Please done this project as soon possible.</p>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">
+                                                                    <div class="message-img">
+                                                                        <img src="img/contact/4.jpg" alt="">
+                                                                    </div>
+                                                                    <div class="message-content">
+                                                                        <span class="message-date">16 Sept</span>
+                                                                        <h2>Sulaiman din</h2>
+                                                                        <p>Please done this project as soon possible.</p>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">
+                                                                    <div class="message-img">
+                                                                        <img src="img/contact/3.jpg" alt="">
+                                                                    </div>
+                                                                    <div class="message-content">
+                                                                        <span class="message-date">16 Sept</span>
+                                                                        <h2>Victor Jara</h2>
+                                                                        <p>Please done this project as soon possible.</p>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">
+                                                                    <div class="message-img">
+                                                                        <img src="img/contact/2.jpg" alt="">
+                                                                    </div>
+                                                                    <div class="message-content">
+                                                                        <span class="message-date">16 Sept</span>
+                                                                        <h2>Victor Jara</h2>
+                                                                        <p>Please done this project as soon possible.</p>
+                                                                    </div>
+                                                                </a>
+                                                            </li> -->
+                                                        </ul>
+                                                        <div class="message-view">
+                                                            <a href="#">查看所有消息</a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="nav-item"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="educate-icon educate-bell" aria-hidden="true"></i><span class="indicator-nt"></span></a>
+                                                    <div role="menu" class="notification-author dropdown-menu animated zoomIn">
+                                                        <div class="notification-single-top">
+                                                            <h1>通知事项</h1>
+                                                        </div>
+                                                        <ul class="notification-menu">
+                                                            <!-- <li>
+                                                                <a href="#">
+                                                                    <div class="notification-icon">
+                                                                        <i class="educate-icon educate-checked edu-checked-pro admin-check-pro" aria-hidden="true"></i>
+                                                                    </div>
+                                                                    <div class="notification-content">
+                                                                        <span class="notification-date">16 Sept</span>
+                                                                        <h2>Advanda Cro</h2>
+                                                                        <p>Please done this project as soon possible.</p>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">
+                                                                    <div class="notification-icon">
+                                                                        <i class="fa fa-cloud edu-cloud-computing-down" aria-hidden="true"></i>
+                                                                    </div>
+                                                                    <div class="notification-content">
+                                                                        <span class="notification-date">16 Sept</span>
+                                                                        <h2>Sulaiman din</h2>
+                                                                        <p>Please done this project as soon possible.</p>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">
+                                                                    <div class="notification-icon">
+                                                                        <i class="fa fa-eraser edu-shield" aria-hidden="true"></i>
+                                                                    </div>
+                                                                    <div class="notification-content">
+                                                                        <span class="notification-date">16 Sept</span>
+                                                                        <h2>Victor Jara</h2>
+                                                                        <p>Please done this project as soon possible.</p>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">
+                                                                    <div class="notification-icon">
+                                                                        <i class="fa fa-line-chart edu-analytics-arrow" aria-hidden="true"></i>
+                                                                    </div>
+                                                                    <div class="notification-content">
+                                                                        <span class="notification-date">16 Sept</span>
+                                                                        <h2>Victor Jara</h2>
+                                                                        <p>Please done this project as soon possible.</p>
+                                                                    </div>
+                                                                </a>
+                                                            </li> -->
+                                                        </ul>
+                                                        <div class="notification-view">
+                                                            <a href="#">查看所有通知</a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
+															<img src="img/product/pro4.jpg" alt="" />
+															<span class="admin-name">安德森教授</span>
+															<i class="fa fa-angle-down edu-icon edu-down-arrow"></i>
+														</a>
+                                                    <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated zoomIn">
+                                                        <li><a href="#"><span class="edu-icon edu-home-admin author-log-ic"></span>我的账户</a>
+                                                        </li>
+                                                        <li><a href="#"><span class="edu-icon edu-user-rounded author-log-ic"></span>我的资料</a>
+                                                        </li>
+                                                        <li><a href="#"><span class="edu-icon edu-settings author-log-ic"></span>设置</a>
+                                                        </li>
+                                                        <li><a href="/adminlayout"><span class="edu-icon edu-locked author-log-ic"></span>注销</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="nav-item nav-setting-open"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="fa fa-tasks"></i></a>
+
+                                                    <div role="menu" class="admintab-wrap menu-setting-wrap menu-setting-wrap-bg dropdown-menu animated zoomIn">
+                                                        <ul class="nav nav-tabs custon-set-tab">
+                                                            <li class="active"><a data-toggle="tab" href="#Notes">新闻</a>
+                                                            </li>
+                                                            <li><a data-toggle="tab" href="#Projects">活动</a>
+                                                            </li>
+                                                            <li><a data-toggle="tab" href="#Settings">设置</a>
+                                                            </li>
+                                                        </ul>
+
+                                                        <div class="tab-content custom-bdr-nt">
+                                                            <div id="Notes" class="tab-pane fade in active">
+                                                                <div class="notes-area-wrap">
+                                                                    <div class="note-heading-indicate">
+                                                                        <h2><i class="fa fa-comments-o"></i> 最新消息</h2>
+                                                                        <p>您有10个新新闻.</p>
+                                                                    </div>
+                                                                    <div class="notes-list-area notes-menu-scrollbar">
+                                                                        <ul class="notes-menu-list">
+                                                                            <li>
+                                                                                <a href="#">
+                                                                                    <div class="notes-list-flow">
+                                                                                        <div class="notes-img">
+                                                                                            <img src="img/contact/4.jpg" alt="" />
+                                                                                        </div>
+                                                                                        <div class="notes-content">
+                                                                                            <p> 使用Lorem Ipsum的要点是它具有或多或少的法线。</p>
+                                                                                            <span>昨天下午 2:24</span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="#">
+                                                                                    <div class="notes-list-flow">
+                                                                                        <div class="notes-img">
+                                                                                            <img src="img/contact/1.jpg" alt="" />
+                                                                                        </div>
+                                                                                        <div class="notes-content">
+                                                                                            <p> 使用Lorem Ipsum的要点是它具有或多或少的法线。</p>
+                                                                                            <span>昨天下午 2:24</span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="#">
+                                                                                    <div class="notes-list-flow">
+                                                                                        <div class="notes-img">
+                                                                                            <img src="img/contact/2.jpg" alt="" />
+                                                                                        </div>
+                                                                                        <div class="notes-content">
+                                                                                            <p> 使用Lorem Ipsum的要点是它具有或多或少的法线。</p>
+                                                                                            <span>昨天下午 2:24</span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="#">
+                                                                                    <div class="notes-list-flow">
+                                                                                        <div class="notes-img">
+                                                                                            <img src="img/contact/3.jpg" alt="" />
+                                                                                        </div>
+                                                                                        <div class="notes-content">
+                                                                                            <p> 使用Lorem Ipsum的要点是它具有或多或少的法线。</p>
+                                                                                            <span>昨天下午 2:24</span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="#">
+                                                                                    <div class="notes-list-flow">
+                                                                                        <div class="notes-img">
+                                                                                            <img src="img/contact/4.jpg" alt="" />
+                                                                                        </div>
+                                                                                        <div class="notes-content">
+                                                                                            <p> 使用Lorem Ipsum的要点是它具有或多或少的法线。</p>
+                                                                                            <span>昨天下午 2:24</span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="#">
+                                                                                    <div class="notes-list-flow">
+                                                                                        <div class="notes-img">
+                                                                                            <img src="img/contact/1.jpg" alt="" />
+                                                                                        </div>
+                                                                                        <div class="notes-content">
+                                                                                            <p> 使用Lorem Ipsum的要点是它具有或多或少的法线。</p>
+                                                                                            <span>昨天下午 2:24</span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="#">
+                                                                                    <div class="notes-list-flow">
+                                                                                        <div class="notes-img">
+                                                                                            <img src="img/contact/2.jpg" alt="" />
+                                                                                        </div>
+                                                                                        <div class="notes-content">
+                                                                                            <p> 使用Lorem Ipsum的要点是它具有或多或少的法线。</p>
+                                                                                            <span>昨天下午 2:24</span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="#">
+                                                                                    <div class="notes-list-flow">
+                                                                                        <div class="notes-img">
+                                                                                            <img src="img/contact/1.jpg" alt="" />
+                                                                                        </div>
+                                                                                        <div class="notes-content">
+                                                                                            <p> 使用Lorem Ipsum的要点是它具有或多或少的法线。</p>
+                                                                                            <span>昨天下午 2:24</span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="#">
+                                                                                    <div class="notes-list-flow">
+                                                                                        <div class="notes-img">
+                                                                                            <img src="img/contact/2.jpg" alt="" />
+                                                                                        </div>
+                                                                                        <div class="notes-content">
+                                                                                            <p> 使用Lorem Ipsum的要点是它具有或多或少的法线。</p>
+                                                                                            <span>昨天下午 2:24</span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="#">
+                                                                                    <div class="notes-list-flow">
+                                                                                        <div class="notes-img">
+                                                                                            <img src="img/contact/3.jpg" alt="" />
+                                                                                        </div>
+                                                                                        <div class="notes-content">
+                                                                                            <p> 使用Lorem Ipsum的要点是它具有或多或少的法线。</p>
+                                                                                            <span>昨天下午 2:24</span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div id="Projects" class="tab-pane fade">
+                                                                <div class="projects-settings-wrap">
+                                                                    <div class="note-heading-indicate">
+                                                                        <h2><i class="fa fa-cube"></i> 近期活动</h2>
+                                                                        <p> 您有20最近活动。</p>
+                                                                    </div>
+                                                                    <div class="project-st-list-area project-st-menu-scrollbar">
+                                                                        <ul class="projects-st-menu-list">
+                                                                            <li>
+                                                                                <a href="#">
+                                                                                    <div class="project-list-flow">
+                                                                                        <div class="projects-st-heading">
+                                                                                            <h2>新用户注册</h2>
+                                                                                            <p> 使用Lorem Ipsum的要点是它或多或少是正常的。</p>
+                                                                                            <span class="project-st-time">1小时前</span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="#">
+                                                                                    <div class="project-list-flow">
+                                                                                        <div class="projects-st-heading">
+                                                                                            <h2>收到新订单</h2>
+                                                                                            <p> 使用Lorem Ipsum的要点是它或多或少是正常的。</p>
+                                                                                            <span class="project-st-time">2小时前</span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="#">
+                                                                                    <div class="project-list-flow">
+                                                                                        <div class="projects-st-heading">
+                                                                                            <h2>收到新订单</h2>
+                                                                                            <p> 使用Lorem Ipsum的要点是它或多或少是正常的。</p>
+                                                                                            <span class="project-st-time">3小时前</span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="#">
+                                                                                    <div class="project-list-flow">
+                                                                                        <div class="projects-st-heading">
+                                                                                            <h2>收到新订单</h2>
+                                                                                            <p> 使用Lorem Ipsum的要点是它或多或少是正常的。</p>
+                                                                                            <span class="project-st-time">4小时前</span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="#">
+                                                                                    <div class="project-list-flow">
+                                                                                        <div class="projects-st-heading">
+                                                                                            <h2>新用户注册</h2>
+                                                                                            <p> 使用Lorem Ipsum的要点是它或多或少是正常的。</p>
+                                                                                            <span class="project-st-time">5小时前</span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="#">
+                                                                                    <div class="project-list-flow">
+                                                                                        <div class="projects-st-heading">
+                                                                                            <h2>新订单</h2>
+                                                                                            <p> 使用Lorem Ipsum的要点是它或多或少是正常的。</p>
+                                                                                            <span class="project-st-time">6小时前</span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="#">
+                                                                                    <div class="project-list-flow">
+                                                                                        <div class="projects-st-heading">
+                                                                                            <h2>新用户</h2>
+                                                                                            <p> 使用Lorem Ipsum的要点是它或多或少是正常的。</p>
+                                                                                            <span class="project-st-time">7小时前</span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="#">
+                                                                                    <div class="project-list-flow">
+                                                                                        <div class="projects-st-heading">
+                                                                                            <h2>新订单</h2>
+                                                                                            <p> 使用Lorem Ipsum的要点是它或多或少是正常的。</p>
+                                                                                            <span class="project-st-time">9小时前</span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div id="Settings" class="tab-pane fade">
+                                                                <div class="setting-panel-area">
+                                                                    <div class="note-heading-indicate">
+                                                                        <h2><i class="fa fa-gears"></i> 设定面板</h2>
+                                                                        <p> 您有20个设置。5未完成</p>
+                                                                    </div>
+                                                                    <ul class="setting-panel-list">
+                                                                        <li>
+                                                                            <div class="checkbox-setting-pro">
+                                                                                <div class="checkbox-title-pro">
+                                                                                    <h2>显示通知</h2>
+                                                                                    <div class="ts-custom-check">
+                                                                                        <div class="onoffswitch">
+                                                                                            <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example">
+                                                                                            <label class="onoffswitch-label" for="example">
+																									<span class="onoffswitch-inner"></span>
+																									<span class="onoffswitch-switch"></span>
+																								</label>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li>
+                                                                            <div class="checkbox-setting-pro">
+                                                                                <div class="checkbox-title-pro">
+                                                                                    <h2>禁用聊天</h2>
+                                                                                    <div class="ts-custom-check">
+                                                                                        <div class="onoffswitch">
+                                                                                            <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example3">
+                                                                                            <label class="onoffswitch-label" for="example3">
+																									<span class="onoffswitch-inner"></span>
+																									<span class="onoffswitch-switch"></span>
+																								</label>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li>
+                                                                            <div class="checkbox-setting-pro">
+                                                                                <div class="checkbox-title-pro">
+                                                                                    <h2>启用历史记录</h2>
+                                                                                    <div class="ts-custom-check">
+                                                                                        <div class="onoffswitch">
+                                                                                            <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example4">
+                                                                                            <label class="onoffswitch-label" for="example4">
+																									<span class="onoffswitch-inner"></span>
+																									<span class="onoffswitch-switch"></span>
+																								</label>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li>
+                                                                            <div class="checkbox-setting-pro">
+                                                                                <div class="checkbox-title-pro">
+                                                                                    <h2>显示图表</h2>
+                                                                                    <div class="ts-custom-check">
+                                                                                        <div class="onoffswitch">
+                                                                                            <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example7">
+                                                                                            <label class="onoffswitch-label" for="example7">
+																									<span class="onoffswitch-inner"></span>
+																									<span class="onoffswitch-switch"></span>
+																								</label>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li>
+                                                                            <div class="checkbox-setting-pro">
+                                                                                <div class="checkbox-title-pro">
+                                                                                    <h2>每天更新</h2>
+                                                                                    <div class="ts-custom-check">
+                                                                                        <div class="onoffswitch">
+                                                                                            <input type="checkbox" name="collapsemenu" checked="" class="onoffswitch-checkbox" id="example2">
+                                                                                            <label class="onoffswitch-label" for="example2">
+																									<span class="onoffswitch-inner"></span>
+																									<span class="onoffswitch-switch"></span>
+																								</label>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li>
+                                                                            <div class="checkbox-setting-pro">
+                                                                                <div class="checkbox-title-pro">
+                                                                                    <h2>全球搜寻</h2>
+                                                                                    <div class="ts-custom-check">
+                                                                                        <div class="onoffswitch">
+                                                                                            <input type="checkbox" name="collapsemenu" checked="" class="onoffswitch-checkbox" id="example6">
+                                                                                            <label class="onoffswitch-label" for="example6">
+																									<span class="onoffswitch-inner"></span>
+																									<span class="onoffswitch-switch"></span>
+																								</label>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li>
+                                                                            <div class="checkbox-setting-pro">
+                                                                                <div class="checkbox-title-pro">
+                                                                                    <h2>离线用户</h2>
+                                                                                    <div class="ts-custom-check">
+                                                                                        <div class="onoffswitch">
+                                                                                            <input type="checkbox" name="collapsemenu" checked="" class="onoffswitch-checkbox" id="example5">
+                                                                                            <label class="onoffswitch-label" for="example5">
+																									<span class="onoffswitch-inner"></span>
+																									<span class="onoffswitch-switch"></span>
+																								</label>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </li>
+                                                                    </ul>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Mobile Menu start -->
+            <!-- Mobile Menu end -->
+            <div class="breadcome-area">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="breadcome-list single-page-breadcome">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <div class="breadcome-heading">
+                                            <form role="search" class="sr-input-func">
+                                                <input type="text" placeholder="搜搜..." class="search-int form-control">
+                                                <a href="#"><i class="fa fa-search"></i></a>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <ul class="breadcome-menu">
+                                            <li><a href="index.html">首页</a> <span class="bread-slash">/</span>
+                                            </li>
+                                            <li><span class="bread-blod">图书管理/</span>
+                                            </li>
+                                            <li><span class="bread-blod">添加图书</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Single pro tab review Start-->
+        <div class="single-pro-review-area mt-t-30 mg-b-15">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="product-payment-inner-st">
+                            <ul id="myTabedu1" class="tab-review-design">
+                                <li class="active"><a href="#description">基本信息</a></li>
+                            </ul>
+                            <div id="myTabContent" class="tab-content custom-product-edit">
+                                <div class="product-tab-list tab-pane fade active in" id="description">
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <div class="review-content-section">
+                                                <div id="dropzone1" class="pro-ad">
+                                                    <form action="" class="dropzone dropzone-custom needsclick add-professors">
+                                                        <div class="row book_from">
+                                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                                {{#each data}}
+                                                                <input type="hidden" name="id" class="form-control book_id" value="{{id}}">
+                                                                <div class="form-groups">
+                                                                    <label for="">上传图片</label>
+                                                                    <!-- <p class="fonts err_imgs">图片必须上传</p> -->
+                                                                    <div class="imgslist" data-imgs="{{picname}}">
+                                                                        <li class="imgli">
+                                                                            <img src="img/upfile.png"  class="imgs">
+                                                                            <input name="picname" type="file" class="form-control upfile picname">
+                                                                        </li>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="">所属分类</label>
+                                                                    <div class="select_style" data-type="{{typeid}}">
+                                                                {{/each}}
+                                                                        <select name="pid" class="pid form-control">
+                                                                            {{#each types}}
+                                                                                <option value="{{id}}">{{name}}</option>
+                                                                            {{/each}}
+                                                                        </select>
+                                                                        <select name="pid1"  class="pid1 form-control" >
+                                                                        </select>
+                                                                        <select name="pid2"  class="pid2 form-control" >
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                                {{#each data}}
+                                                                <div class="form-group">
+                                                                    <label for="">图书名称</label>
+                                                                    <input name="book" type="text" class="form-control bookname" value="{{book}}">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="">简介</label>
+                                                                    <div class="form-group res-mg-t-15">
+                                                                        <textarea name="descr" class="descr">{{descr}}</textarea>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="">出版社</label>
+                                                                    <input name="press" type="text" class="form-control press" value="{{press}}">
+                                                                </div>
+                                                                {{/each}}
+                                                            </div>
+                                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                                {{#each data}}
+                                                                <div class="form-group">
+                                                                    <label for="">作者</label>
+                                                                    <input name="author" type="pass" class="form-control author" value="{{author}}">
+                                                                </div>
+                                                                <div class="form-group area_text">
+                                                                    <label for="">出版时间</label>
+                                                                    <input name="publicationtime" class="form-control publicationtime" type="text" value="{{publicationtime}}">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="">字数</label>
+                                                                    <input name="number" type="text" class="form-control number" value="{{numbers}}">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="">ISBN</label>
+                                                                    <input name="isbn" type="text" class="form-control isbn" value="{{isbn}}">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="">单价</label>
+                                                                    <input name="price" type="text" class="form-control price" value="{{price}}">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="">原价</label>
+                                                                    <input name="oldprice" type="text" class="form-control oldprice" value="{{oldprice}}">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="">状态</label>
+                                                                    <input type="hidden" class="book_state" value="{{state}}">
+                                                                    <select name="state" class="form-control state">
+                                                                        <option value="1">新添加</option>
+                                                                        <option value="2">在售</option>
+                                                                        <option value="3">下架</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="">库存量</label>
+                                                                    <input name="store" type="text" class="form-control store" value="{{store}}">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="">添加时间</label>
+                                                                    <input name="addtime" type="text" class="form-control addtime" value="{{addtime}}">
+                                                                </div>
+                                                                {{/each}}
+                                                            </div>
+                                                        </div>
+                                                       
+                                                        <div class="row">
+                                                            <div class="col-lg-12">
+                                                                <div class="payment-adress">
+                                                                    <button type="button" class="btn btn-primary waves-effect waves-light save_book">保存</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-tab-list tab-pane fade" id="reviews">
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <div class="review-content-section">
+                                                <div class="row">
+                                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                        <div class="devit-card-custom">
+                                                            <div class="form-group">
+                                                                <input type="text" class="form-control" placeholder="Email">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <input type="number" class="form-control" placeholder="Phone">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <input type="password" class="form-control" placeholder="Password">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <input type="password" class="form-control" placeholder="Confirm Password">
+                                                            </div>
+                                                            <a href="#!" class="btn btn-primary waves-effect waves-light">Submit</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-tab-list tab-pane fade" id="INFORMATION">
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <div class="review-content-section">
+												<div class="row">
+													<div class="col-lg-12">
+														<div class="devit-card-custom">
+															<div class="form-group">
+																<input type="url" class="form-control" placeholder="Facebook URL">
+															</div>
+															<div class="form-group">
+																<input type="url" class="form-control" placeholder="Twitter URL">
+															</div>
+															<div class="form-group">
+																<input type="url" class="form-control" placeholder="Google Plus">
+															</div>
+															<div class="form-group">
+																<input type="url" class="form-control" placeholder="Linkedin URL">
+															</div>
+															<button type="submit" class="btn btn-primary waves-effect waves-light">Submit</button>
+														</div>
+													</div>
+												</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright-area">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="footer-copy-right">
+                            <!-- <p>Copyright © 2018. All rights reserved. More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></p> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jquery
+		============================================ -->
+
+    <!-- bootstrap JS
+		============================================ -->
+    <script src="js/admin_bootstrap.min.js"></script>
+    <!-- wow JS
+		============================================ -->
+    <script src="js/wow.min.js"></script>
+    <!-- price-slider JS
+		============================================ -->
+    <script src="js/jquery-price-slider.js"></script>
+    <!-- meanmenu JS
+		============================================ -->
+    <script src="js/jquery.meanmenu.js"></script>
+    <!-- owl.carousel JS
+		============================================ -->
+    <script src="js/owl.carousel.min.js"></script>
+    <!-- sticky JS
+		============================================ -->
+    <script src="js/jquery.sticky.js"></script>
+    <!-- scrollUp JS
+		============================================ -->
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <!-- mCustomScrollbar JS
+		============================================ -->
+    <script src="js/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/scrollbar/mCustomScrollbar-active.js"></script>
+    <!-- metisMenu JS
+		============================================ -->
+    <script src="js/metisMenu/metisMenu.min.js"></script>
+    <script src="js/metisMenu/metisMenu-active.js"></script>
+    <!-- morrisjs JS
+		============================================ -->
+    <script src="js/sparkline/jquery.sparkline.min.js"></script>
+    <script src="js/sparkline/jquery.charts-sparkline.js"></script>
+    <!-- calendar JS
+		============================================ -->
+    <script src="js/calendar/moment.min.js"></script>
+    <script src="js/calendar/fullcalendar.min.js"></script>
+    <script src="js/calendar/fullcalendar-active.js"></script>
+    <!-- maskedinput JS
+		============================================ -->
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/masking-active.js"></script>
+    <!-- datepicker JS
+		============================================ -->
+    <script src="js/datepicker/jquery-ui.min.js"></script>
+    <script src="js/datepicker/datepicker-active.js"></script>
+    <!-- form validate JS
+		============================================ -->
+    <script src="js/form-validation/jquery.form.min.js"></script>
+    <script src="js/form-validation/jquery.validate.min.js"></script>
+    <script src="js/form-validation/form-active.js"></script>
+    <!-- dropzone JS
+		============================================ -->
+    <!-- <script src="js/dropzone/dropzone.js"></script> -->
+    <!-- tab JS
+		============================================ -->
+    <script src="js/tab.js"></script>
+    <!-- plugins JS
+		============================================ -->
+    <script src="js/admin_plugins.js"></script>
+    <!-- main JS
+		============================================ -->
+    <script src="js/admin_main.js"></script>
+    <!-- tawk chat JS
+		============================================ -->
+    <!-- <script src="js/tawk-chat.js"></script> -->
+
+    <script>
+        $(function(){
+            // console.log($('.book_state').val());
+            $('.state').children().each(function(){
+                console.log($(this).val());
+                if($(this).val() == $('.book_state').val()){
+                    $(this).attr('selected','selected');
+                }
+            });
+            $('.pid1').hide();
+            $('.pid2').hide();
+            var types = $('.select_style').attr('data-type').split(',');
+            types.pop();
+            types.reverse();
+            // console.log(types);
+            var imglist = $('.imgslist').attr('data-imgs').split(',');
+            for(var i=0;i<imglist.length;i++){
+                var $li = $('.imgslist').children().last().clone(true);
+                $li.attr('data-code',i);
+                $li.children().eq(0).attr('src',imglist[i]);
+                $li.insertBefore($('.imgslist').children().last())
+            }
+            $('.pid').children().each(function(){
+                 if($(this).html() == types[0]){
+                     $(this).attr('selected','selected');
+                     return false;
+                    }
+            })
+            if(types.length == 2){
+                var pid = $('.pid').val();
+                $.ajax({
+                    type:'get',
+                    url:'/getcg',
+                    data:'pid='+pid,
+                    dataType:'json',
+                    success:function(result){
+                        // console.log(result);
+                        if(result.length != 0){
+                            $('.pid1').children().remove();
+                            $('.pid1').show();
+                            for(var i=0;i<result.length;i++){
+                                var $option = $('<option value="'+result[i].id+'">'+result[i].name+'</option>');
+                                $('.pid1').append($option);
+                            }
+                            $('.pid1').children().each(function(){
+                                if($(this).html() == types[1]){
+                                    $(this).attr('selected','selected');
+                                    return false;
+                                    }
+                            })
+                        }
+                    }
+                })
+            }else if(types.length == 3){
+                var pid = $('.pid1').val();
+                $.ajax({
+                    type:'get',
+                    url:'/getcg',
+                    data:'pid='+pid,
+                    dataType:'json',
+                    success:function(result){
+                        // console.log(result);
+                        if(result.length != 0){
+                            $('.pid2').children().remove();
+                            $('.pid2').show();
+                            for(var i=0;i<result.length;i++){
+                                var $option = $('<option value="'+result[i].id+'">'+result[i].name+'</option>');
+                                $('.pid2').append($option);
+                            }
+                            $('.pid2').children().each(function(){
+                                if($(this).html() == types[2]){
+                                    $(this).attr('selected','selected');
+                                    return false;
+                                    }
+                            })
+                        }
+                    }
+                })
+            }
+            $('.pid').change(function(){
+                var pid = $(this).val();
+                $.ajax({
+                    type:'get',
+                    url:'/getcg',
+                    data:'pid='+pid,
+                    dataType:'json',
+                    success:function(result){
+                        // console.log(result);
+                        if(result.length != 0){
+                            $('.pid1').children().remove();
+                            $('.pid1').show();
+                            for(var i=0;i<result.length;i++){
+                                var $option = $('<option value="'+result[i].id+'">'+result[i].name+'</option>');
+                                $('.pid1').append($option);
+                            }
+                        }else{
+                            $('.pid1').hide();
+                            $('.pid1').children().eq(0).siblings().remove();
+                        }
+                    }
+                })
+            })
+            $('.pid1').change(function(){
+                var pid = $(this).val();
+                $.ajax({
+                    type:'get',
+                    url:'/getcg',
+                    data:'pid='+pid,
+                    dataType:'json',
+                    success:function(result){
+                        // console.log(result);
+                        if(result.length != 0){
+                            $('.pid2').children().remove();
+                            $('.pid2').show();
+                            for(var i=0;i<result.length;i++){
+                                var $option = $('<option value="'+result[i].id+'">'+result[i].name+'</option>');
+                                $('.pid2').append($option);
+                            }
+                        }else{
+                            $('.pid2').hide();
+                            $('.pid2').children().eq(0).siblings().remove();
+                        }
+                    }
+                })
+            })
+            //点击上传图片
+            $('.imgs').click(function(i){
+                $('.err_imgs').hide();
+                var code = $(this).attr('data-code');
+                if(code == undefined){
+                    code = 0;
+                }
+                var length = $('.imgs').length;
+                // console.log(length);
+                if((Number($(this).attr('data-code'))+1) == length || length == 1){
+                    $('.picname').eq(code).trigger('click');
+                    uping(code,true);
+                }else{
+                    $('.picname').eq(code).trigger('click');
+                    uping(code,false);
+                }
+            })
+            
+            //获取上传的图片
+            function uping(code,cutoff){
+                // console.log(cutoff)
+                $('.picname').eq(code).one('change',function(e){
+                    var input = e.target;
+                    var files = e.target.files;
+                    // console.log(files);
+                    if(cutoff){
+                        var elemt = $(this).parent().clone(true);
+                        $(this).parent().parent().append(elemt);
+                    }
+                    $(this).prev('img').attr('src','img/'+files[0].name);
+                    $('.imgs').each(function(i){
+                        $(this).attr('data-code',i);
+                    })
+                    return false;
+                })
+            }
+
+            $('.err_imgs').hide();
+            $('.book_from input').each(function(){
+                var that = $(this);
+                $(this).focus(function(){
+                    that.prev('p').remove();
+                })
+            })
+            $('.price').val(Number($('.price').val()).toFixed(2))
+            $('.oldprice').val(Number($('.oldprice').val()).toFixed(2))
+            $('.save_book').click(function(){
+                var str = '';
+                var code = 0;
+                var code1 = 0;
+                var pid;
+                //判断是否填写数据
+                $('.book_from .form-group input').each(function(){
+                    if($(this).val() == ''){
+                        code = 0;
+                        if(!$(this).prev().is('p')){
+                            $(this).before('<p class="fonts">必须填写</p>');
+                        }
+                    }else{
+                        code = 1;
+                    }
+                })
+                var length = $('.imgs').length;
+                if(length == 1){
+                    $('.err_imgs').show();
+                    code1 = 0;
+                }else{
+                    code1 = 1;
+                    for(var i=0;i<length-1;i++){
+                        str = str + $('.imgs').eq(i).attr('src');
+                        if(i<length-2){
+                            str = str + ','
+                        }
+                    }
+                }
+                if($('.pid1').css('display') == 'none' || $('pid1').children().eq(0).is(':selected')){
+                    $('.pid').children().each(function(){
+                        if($(this).is(':selected')){
+                            pid = $(this).val();
+                        }
+                    })
+                }
+                if($('.pid1').css('display') != 'none'){
+                    $('.pid1').children().each(function(){
+                        if($(this).is(':selected')){
+                            pid = $(this).val();
+                        }
+                    })
+                }
+                if($('.pid2').css('display') != 'none'){
+                    $('.pid2').children().each(function(){
+                        if($(this).is(':selected')){
+                            pid = $(this).val();
+                        }
+                    })
+                }
+                // console.log(code,code1);
+                if(code == 1 && code1 == 1){
+                    var data = {};
+                    data.id = $('.book_id').val();
+                    data.picname = str;
+                    data.typeid = pid;
+                    data.book = $('.bookname').val();
+                    data.press = $('.press').val();
+                    data.descr = $('.descr').val();
+                    data.author = $('.author').val();
+                    data.publicationtime = $('.publicationtime').val();
+                    data.number = $('.number').val();
+                    data.price = $('.price').val();
+                    data.oldprice = $('.oldprice').val();
+                    data.state = $('.state').val();
+                    data.store = $('.store').val();
+                    data.isbn =  $('.isbn').val();
+                    data.addtime = new Date().toLocaleDateString();
+                    console.log(data);
+                    $.ajax({
+                        type:'get',
+                        url:'/edit_book',
+                        data:'data='+JSON.stringify(data),
+                        dataType:'json',
+                        success:function(data){
+                            if(data){
+                                alert('图书修改成功!!!');
+                                window.location = '/book_list';
+                            }
+                        }
+                    })
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>
